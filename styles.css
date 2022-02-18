@@ -20,6 +20,12 @@ body {
   font-size: 15px;
   padding: 4rem 2rem 0;
   background-repeat: no-repeat;
+  width: 100vw;
+  min-width: 375px;
+  min-height: 100vh; */
+  /* overflow: hidden;
+  /*TEST */
+
 }
 
 /*HEADER*/
@@ -44,12 +50,6 @@ header p {
 }
 
 /*MAIN*/
-
-main .container {
-  /* width: 100%;
-  height: 5rem;
-  background: black; */
-}
 
 .block-1,
 .block-2,
@@ -168,9 +168,18 @@ footer .p {
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 770px) {
+  body {
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    /* background-image: url(/images/bg-pattern-bottom-desktop.svg); */
+    /* height: 100vw; */
+    padding: 100px;
+    /* font-size: 1.5rem; */
+  }
+
   header {
-    width: 50%;
+    width: 40%;
     float: left;
+    /* overflow: hidden; */
   }
 
   header h1 {
@@ -185,26 +194,82 @@ footer .p {
 
   main {
     float: left;
-    width: 50%;
+    width: 60%;
+    /* overflow: hidden; */
+  }
+
+  .grid h2 {
+    text-align: center;
+    vertical-align: center;
+    line-height: 3rem;
+
+  }
+
+  .block-1 {
+    /* width: 25rem;*/
+    height: 3rem;
+    /* flex-grow: 1;
+    flex-basis: 0;
+    align-items: flex-start; */
   }
 
   .block-2 {
     /* float: left; */
     margin-left: 2rem;
+    /* width: 25rem; */
+    height: 3rem;
     /* background-color: black; */
   }
 
   .block-3 {
+    /* width: 25rem; */
+    height: 3rem;
     margin-left: 4rem;
   }
 
-  .star-icons {
-    float: left;
+  .grid {
+    padding-top: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: flex-start;
+    width: 85%;
+    /* max-width: 25rem; */
+    /* overflow: auto; */
   }
+
+  .stars {
+    float: left;
+    margin-left: 2rem;
+    }
 
   .footer {
     margin-top: 350px;
     display: flex;
+    height: 350px;
+  }
+
+  .comment-box {
+    /* flex-grow: 1;
+    flex-basis: 0; */
+    margin: 0;
+    max-height: 15rem;
+  }
+
+  .comment-box:nth-child(1) {
+    margin-right: 1rem;
+    /* min-height: 20rem; */
+  }
+
+  .comment-box:nth-child(2) {
+    margin-right: 1rem;
+    margin-top: 2rem;
+    /* min-height: 20rem; */
+    /* margin-top: 20rem; */
+  }
+
+  .comment-box.irene {
+    margin-top: 4rem;
+    /* min-height: 20rem; */
   }
 }
 @media screen and (min-width: 1440px) {
